@@ -43,5 +43,9 @@ function playRound(playerSelection, computerSelection) {
 
 // Play a 5 round game and report the winner at the end.
 function game() {
-  return;
+  for (let i = 0; i < 5; i++) {
+    let response = prompt("Enter Rock, Paper, or Scissors: ");
+    result = playRound(response, getComputerChoice());
+    console.log(result);
+  }
 }
