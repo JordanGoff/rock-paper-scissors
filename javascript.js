@@ -69,4 +69,16 @@ function game() {
       computerTally++;
     }
   }
+
+  // Obtain the score.
+  score = playerTally + " to " + computerTally + "!";
+
+  // Indicate who the winner is.
+  if (playerTally > computerTally) {
+    console.log(`You won ${score}`);
+  } else if (playerTally < computerTally) {
+    console.log(`You lost ${score}`);
+  } else {
+    console.log(`You tied ${score}`);
+  }
 }
