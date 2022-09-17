@@ -2,7 +2,7 @@
 function getComputerChoice() {
   // Get a random integer between 0 and 2.
   // Math.random() is the interval [0, 1).
-  choice = Math.floor(3 * Math.random());
+  let choice = Math.floor(3 * Math.random());
 
   // Return the computer's choice depending on the random integer.
   switch (choice) {
@@ -37,4 +37,11 @@ function playRound(playerSelection, computerSelection) {
   } else {
     return "Tie!";
   }
+}
+
+
+
+// Play a 5 round game and report the winner at the end.
+function game() {
+  return;
 }
