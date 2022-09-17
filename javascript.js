@@ -71,7 +71,7 @@ function game() {
   }
 
   // Obtain the score.
-  score = playerTally + " to " + computerTally + "!";
+  let score = playerTally + " to " + computerTally + "!";
 
   // Indicate who the winner is.
   if (playerTally > computerTally) {
