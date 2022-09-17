@@ -65,6 +65,7 @@ function game() {
       i--;
       continue;
     }
+    
     // Play a round and get a string deciding who won that round.
     let result = playRound(response, getComputerChoice());
 
