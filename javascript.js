@@ -61,7 +61,7 @@ function game() {
 
     // Check if the player chose a legal move.
     if (response != "rock" && response != "paper" && response != "scissors") {
-      console.log("Illegal");
+      console.log("Illegal move!");
       i--;
       continue;
     }
