@@ -60,7 +60,7 @@ function game() {
     // Get the player's input.
     let response = prompt("Enter Rock, Paper, or Scissors");
     // Play a round and get a string deciding who won that round.
-    result = playRound(response, getComputerChoice());
+    let result = playRound(response, getComputerChoice());
 
     // Give a point to the winner of the round.
     if (result == "w") {
