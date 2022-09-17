@@ -19,9 +19,6 @@ function getComputerChoice() {
 
 // Play a round and return a string that dictates the winner.
 function playRound(playerSelection, computerSelection) {
-  // Make the playerSelection case insensitive.
-  playerSelection = playerSelection.toLowerCase();
-  
   // Compare the player's choice versus the computer's choice and returns the winning scenario.
   if (playerSelection == "rock" && computerSelection == "paper") {
     console.log("You Lose! Paper beats Rock");
@@ -59,6 +56,15 @@ function game() {
   for (let i = 0; i < 5; i++) {
     // Get the player's input.
     let response = prompt("Enter Rock, Paper, or Scissors");
+    // Make the playerSelection case insensitive.
+    response = response.toLowerCase();
+
+    // Check if the player chose a legal move.
+    if (response != "rock" && response != "paper" && response != "scissors") {
+      console.log("Illegal");
+      i--;
+      continue;
+    }
     // Play a round and get a string deciding who won that round.
     let result = playRound(response, getComputerChoice());
 
