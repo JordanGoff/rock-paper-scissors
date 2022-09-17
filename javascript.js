@@ -22,6 +22,7 @@ function playRound(playerSelection, computerSelection) {
   // Make the playerSelection case insensitive.
   playerSelection = playerSelection.toLowerCase();
   
+  // Compare the player's choice versus the computer's choice and returns the winning scenario.
   if (playerSelection == "rock" && computerSelection == "paper") {
     console.log("You Lose! Paper beats Rock");
     return "l";
@@ -50,9 +51,22 @@ function playRound(playerSelection, computerSelection) {
 
 // Play a 5 round game and report the winner at the end.
 function game() {
+  // Initialize the points for the player and the computer.
+  let playerTally = 0;
+  let computerTally = 0;
+
+  // Start the 5 round game.
   for (let i = 0; i < 5; i++) {
-    let response = prompt("Enter Rock, Paper, or Scissors: ");
+    // Get the player's input.
+    let response = prompt("Enter Rock, Paper, or Scissors");
+    // Play a round and get a string deciding who won that round.
     result = playRound(response, getComputerChoice());
-    console.log(result);
+
+    // Give a point to the winner of the round.
+    if (result == "w") {
+      playerTally++;
+    } else if (result == "l") {
+      computerTally++;
+    }
   }
 }
