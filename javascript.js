@@ -1,8 +1,15 @@
+// Return an integer from the interval [a, b].
+function getRandomInteger(a, b) {
+  // Math.random() is the interval [0, 1).
+  return Math.floor(Math.random() * (b - a + 1) + a);
+}
+
+
+
 // Randomly return "Rock", "Paper", or "Scissors".
 function getComputerChoice() {
   // Get a random integer between 0 and 2.
-  // Math.random() is the interval [0, 1).
-  let choice = Math.floor(3 * Math.random());
+  let choice = getRandomInteger(0, 2);
 
   // Return the computer's choice depending on the random integer.
   switch (choice) {
@@ -65,7 +72,7 @@ function game() {
       i--;
       continue;
     }
-    
+
     // Play a round and get a string deciding who won that round.
     let result = playRound(response, getComputerChoice());
 
